@@ -11,7 +11,7 @@ O propósito deste repositório é documentar meu progresso no ecossistema Angul
 
 | Projeto | Descrição | Conceitos Principais |
 | :--- | :--- | :--- |
-| **[users-filter-project](./users-filter-project)** | Painel de gerenciamento de usuários com busca avançada. | `Input/Output`, `Pipes`, `Filtragem de Arrays`, `Enums`. |
+| **[users-filter-project](./users-filter-project)** | Painel de gerenciamento de usuários com filtros de busca. | `Input/Output`, `Pipes`, `Filtragem de Arrays`, `Enums`. |
 | *(Próximo Projeto)* | *Em breve...* | *Stack técnica...* |
 
 ---
@@ -41,10 +41,12 @@ Como cada pasta é uma aplicação Angular independente, siga os passos abaixo p
 
 ---
 
-##📝 Padrões Adotados
-​*TypeScript:* Uso de tipagem estrita para garantir a confiabilidade do código.
-​*Arquitetura:* Seguindo as melhores práticas do Angular para desacoplamento de componentes.
-​*Versionamento:* Commits claros e descritivos para facilitar o rastreamento de mudanças.
+## 📝 Padrões Adotados
+​**TypeScript:** Uso de tipagem estrita para garantir a confiabilidade do código.
+
+​**Arquitetura:** Seguindo as melhores práticas do Angular para desacoplamento de componentes.
+
+​**Versionamento:** Commits claros e descritivos para facilitar o rastreamento de mudanças.
 
 ---
 
