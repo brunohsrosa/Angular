@@ -1,2 +1,25 @@
 <app-sem-diretiva></app-sem-diretiva>
 <app-com-diretiva></app-com-diretiva>
+<p>
+<button disabled>Meu botão</button>
+<p>
+<button [attr.disabled]="false">Meu botão attr</button>
+<!-- O atributo disabled é um atributo booleano, ou seja, ele é considerado presente mesmo que o valor seja false.
+Por isso, o botão continua desabilitado. -->
+<p>
+<button [disabled]="false">Meu botão property binding</button>
+<p>
+<button appDisabled>Meu botão attr diretiva</button>
+<p>
+<p style="background-color: orange; color: white;">Parágrado Normal</p>
+<p>
+<p [attr.style]="'background-color: green; color: white;'">Attribute</p>
+<p>
+<p [style]="'background-color: blue; color: white;'">Property</p>
+<p>
+<p [style]="{
+    backgroundColor: 'purple',
+    color: 'white',
+}">Property</p>
+<p>
+<p appStyle>Diretiva</p>
