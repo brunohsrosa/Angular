@@ -1,27 +1,68 @@
-# ProjetoDirectives
+# Projeto Directives
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+## Descrição do projeto
 
-## Development server
+Este repositório contém um projeto Angular focado no estudo e na demonstração de diretivas. Ele mostra como aplicar diretivas de atributo e como utilizar os decoradores `@HostBinding` e `@HostListener` para modificar o comportamento e a aparência de elementos DOM em tempo de execução.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Objetivo do projeto
 
-## Code scaffolding
+O objetivo é ensinar e exemplificar conceitos práticos de diretivas no Angular, incluindo:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- como criar diretivas de atributo customizadas;
+- como usar `@HostBinding` para ligar propriedades e estilos do host element;
+- como usar `@HostListener` para capturar eventos nativos do host element;
+- como comparar manipulação de DOM com e sem diretivas;
+- como aplicar classes e estilos dinamicamente.
 
-## Build
+## Conceitos Angular utilizados
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- `@Directive` para criar diretivas customizadas.
+- `@HostBinding` para vincular propriedades do host element, como estilo, classe e atributos.
+- `@HostListener` para escutar eventos nativos do host element, como `click`, `mouseover`, `mouseout`, `focus` e `blur`.
+- `@Input` em diretivas para receber valores externos e personalizar o comportamento.
+- Componentes Angular (`AppComponent`, `SemDiretivaComponent`, `ComDiretivaComponent`).
+- Angular module (`AppModule`) para declarar componentes e diretivas.
+- Uso de binding de propriedade (`[style]`, `[class]`, `[disabled]`) e binding de atributo (`[attr.disabled]`, `[attr.style]`).
+- Interação entre componentes e diretivas no template.
 
-## Running unit tests
+## Como executar o projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+No diretório do projeto:
 
-## Running end-to-end tests
+```bash
+npm install
+npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Em seguida, abra no navegador:
 
-## Further help
+```bash
+http://localhost:4200/
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Estrutura de pastas (resumida)
+
+- `src/app/`
+  - `app.component.ts` / `app.component.html` / `app.component.scss` - componente principal.
+  - `com-diretiva/` - componente com uso de diretiva customizada.
+  - `sem-diretiva/` - componente que demonstra comportamento sem diretiva, usando bindings nativos.
+  - `directives/` - diretivas customizadas do projeto:
+    - `highlight.directive.ts` - altera cor de fundo com `@HostBinding` e `@HostListener`.
+    - `disabled.directive.ts` - define o atributo `disabled` no host element.
+    - `styles.directive.ts` - aplica estilos via `@HostBinding('style')`.
+    - `class.directive.ts` - aplica classes via `@HostBinding('class')`.
+    - `listener.directive.ts` - captura eventos com `@HostListener`.
+    - `input-backgroung.directive.ts` - altera o fundo e a cor do texto de inputs com foco.
+
+## Principais aprendizados
+
+- Diretivas de atributo são poderosas para encapsular lógica de apresentação e comportamento.
+- `@HostBinding` permite alterar diretamente propriedades e estilos do elemento onde a diretiva é aplicada.
+- `@HostListener` é útil para escutar eventos nativos sem precisar mexer no template do componente.
+- É possível combinar `@Input` com diretivas para criar componentes reutilizáveis e configuráveis.
+- A diferença entre binding de propriedade e binding de atributo no Angular é essencial para entender como o DOM é atualizado.
+- Um componente pode funcionar sem diretivas, mas as diretivas tornam a lógica de UI mais reutilizável e limpa.
+
+## Observações
+
+O projeto foi gerado com Angular CLI 16.1.0 e utiliza as versões compatíveis do Angular e do TypeScript definidas em `package.json`.
