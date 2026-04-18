@@ -1,0 +1,23 @@
+.filter{
+    width: 100%;
+    height: 100%;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+
+    display: flex; /* Deixas as divs do form na mesma linha */
+    align-items: center; /* Alinhas as divs verticalmente ao centro */
+    justify-content: space-around; /* Distribuis as divs horizontalmente com espaço entre elas */
+    flex-wrap: wrap; /* Permite que as divs quebrem para a próxima linha se necessário */ 
+
+    &__name { }
+
+    &__date-picker { }
+
+    &__status { }
+
+    &__button { }
+}
+
