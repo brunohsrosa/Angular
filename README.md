@@ -1,6 +1,6 @@
 # 📂 Laboratório de Estudos Angular
 
-Bem-vindo ao meu repositório centralizado de estudos em **Angular**. Este espaço funciona como um portfólio da minha evolução técnica, reunindo projetos práticos, componentes de interface e exercícios de lógica desenvolvidos durante minha jornada de especialização.
+Bem-vindo ao meu repositório centralizado de estudos em **Angular**. Este espaço funciona como um portfólio de evolução técnica, reunindo projetos práticos, componentes de interface e exercícios de lógica desenvolvidos durante minha jornada de especialização.
 
 ## 🚀 Objetivo
 O propósito deste repositório é documentar meu progresso no ecossistema Angular, indo desde os fundamentos (filtros, data binding, roteamento) até implementações mais avançadas e uso de bibliotecas de UI.
@@ -48,4 +48,4 @@ Como cada pasta é uma aplicação Angular independente, siga os passos abaixo p
 
 ---
 
-​Desenvolvido por Bruno Santa Rosa — [LinkedIn](https://www.google.com](https://www.linkedin.com/in/bhsantarosa/)
+​Desenvolvido por Bruno Santa Rosa — [LinkedIn]([https://www.linkedin.com/in/bhsantarosa/])
