@@ -3,7 +3,7 @@
     <div class="form__name">
       <mat-form-field class="example-full-width">
         <mat-label>Nome</mat-label>
-        <input matInput placeholder="Ex. Fulano da Silva" [(ngModel)]="filterOptions.name">
+        <input matInput placeholder="Ex. Fulano da Silva" [(ngModel)]="filterOptions.name" />
       </mat-form-field>
     </div>
 
@@ -32,7 +32,7 @@
     </div>
 
     <div class="form__button">
-      <button mat-raised-button color="primary" (click)="onFilter">Filtrar</button>
+      <button mat-raised-button color="primary" (click)="onFilter()">Filtrar</button>
 
     </div>
 

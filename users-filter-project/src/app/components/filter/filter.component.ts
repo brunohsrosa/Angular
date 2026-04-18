@@ -8,7 +8,7 @@ import { IFilterOptions } from 'src/app/interfaces/filter-options.interface';
 })
 export class FilterComponent {
   filterOptions: IFilterOptions = {
-    name: '',
+    name: undefined,
     startDate: undefined,
     endDate: undefined,
     status: undefined
@@ -26,9 +26,4 @@ export class FilterComponent {
     this.onFilterEmitt.emit(this.filterOptions); /* Emitindo o evento com os dados do filtro */
   }
 
-  dateSeleted(date: any){
-    console.log(date);
-    console.log(date instanceof Date);
-    console.log(date.getMonth());
-  }
 }

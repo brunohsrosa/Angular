@@ -6,7 +6,7 @@
     </div>
     <div class="main-left-div">
       <!-- conteudo da div esquerda (80% de altura) -->
-      <app-users-list [userslist]="usersList" (userSelected)="onUserSelected($event)"></app-users-list>
+      <app-users-list [userslist]="usersListFiltered" (userSelected)="onUserSelected($event)"></app-users-list>
       <!-- Passa a lista de usuários para o componente de lista -->
     </div>
   </div>
