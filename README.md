@@ -48,4 +48,4 @@ Como cada pasta é uma aplicação Angular independente, siga os passos abaixo p
 
 ---
 
-​Desenvolvido por Bruno Santa Rosa — [LinkedIn]([https://www.linkedin.com/in/bhsantarosa/])
+​Desenvolvido por Bruno Santa Rosa — [LinkedIn](https://www.linkedin.com/in/bhsantarosa)
