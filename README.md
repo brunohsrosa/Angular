@@ -23,3 +23,29 @@ Como cada pasta é uma aplicação Angular independente, siga os passos abaixo p
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/brunohsrosa/Angular.git
+
+2. **Acesse a pasta do projeto específico:**
+   ```bash
+   cd angular/nome-do-projeto
+
+3. **Instale as dependências:**
+   ```bash
+   npm install
+
+4. **inicie o servidor de desenvolvimento:**
+   ```bash
+   ng serve
+
+5. **Abra o navegador em:**
+   http://localhost:4200/
+
+---
+
+##📝 Padrões Adotados
+​*TypeScript:* Uso de tipagem estrita para garantir a confiabilidade do código.
+​*Arquitetura:* Seguindo as melhores práticas do Angular para desacoplamento de componentes.
+​*Versionamento:* Commits claros e descritivos para facilitar o rastreamento de mudanças.
+
+---
+
+​Desenvolvido por Bruno Santa Rosa — [LinkedIn](https://www.google.com](https://www.linkedin.com/in/bhsantarosa/)
