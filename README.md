@@ -22,4 +22,4 @@ Como cada pasta é uma aplicação Angular independente, siga os passos abaixo p
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/brunohsrosa/angular.git](https://github.com/seu-usuario/angular.git)
+   git clone https://github.com/brunohsrosa/Angular.git
