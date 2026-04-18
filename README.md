@@ -1,0 +1,25 @@
+# 📂 Laboratório de Estudos Angular
+
+Bem-vindo ao meu repositório centralizado de estudos em **Angular**. Este espaço funciona como um portfólio da minha evolução técnica, reunindo projetos práticos, componentes de interface e exercícios de lógica desenvolvidos durante minha jornada de especialização.
+
+## 🚀 Objetivo
+O propósito deste repositório é documentar meu progresso no ecossistema Angular, indo desde os fundamentos (filtros, data binding, roteamento) até implementações mais avançadas e uso de bibliotecas de UI.
+
+---
+
+## 🛠️ Galeria de Projetos
+
+| Projeto | Descrição | Conceitos Principais |
+| :--- | :--- | :--- |
+| **[users-filter-project](./users-filter-project)** | Painel de gerenciamento de usuários com busca avançada. | `Input/Output`, `Pipes`, `Filtragem de Arrays`, `Enums`. |
+| *(Próximo Projeto)* | *Em breve...* | *Stack técnica...* |
+
+---
+
+## 💻 Como Executar os Projetos
+
+Como cada pasta é uma aplicação Angular independente, siga os passos abaixo para rodar localmente:
+
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/seu-usuario/angular.git](https://github.com/seu-usuario/angular.git)
