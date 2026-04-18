@@ -5,11 +5,13 @@ import { FilterComponent } from './filter/filter.component';
 
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from "@angular/common";
+import { UsersListComponent } from './users-list/users-list.component';
 
 @NgModule({
     declarations: [
       UserDetailsComponent,
       FilterComponent,
+      UsersListComponent,
   ],
     imports: [
       AngularMaterialModule,
@@ -20,6 +22,7 @@ import { CommonModule } from "@angular/common";
       UserDetailsComponent,
       FilterComponent,
       FormsModule,
+      UsersListComponent,
       CommonModule
     ],
 })

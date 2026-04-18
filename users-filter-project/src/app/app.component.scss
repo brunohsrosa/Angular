@@ -14,17 +14,14 @@
 .top-div {
   flex-grow: 1;
   /* preenche todo espaco disponivel */
-  background-color: aqua;
 }
 
 .main-left-div {
   height: 80%;
-  /* ocupa 80% da altura do seu container pai */
-  background-color: beige;
+  /* ocupa 80% da altura do seu container pai */;
 }
 
 .rigth-div {
   width: 30%;
   max-width: 100vh;
-  background-color: azure;
 }
