@@ -12,6 +12,7 @@ O propósito deste repositório é documentar meu progresso no ecossistema Angul
 | Projeto | Descrição | Conceitos Principais |
 | :--- | :--- | :--- |
 | **[users-filter-project](./users-filter-project)** | Painel de gerenciamento de usuários com filtros de busca. | `Input/Output`, `Pipes`, `Filtragem de Arrays`, `Enums`. |
+| **[projeto-directives](./projeto-directives)** | Diretivas de Atributo e os decoradores @HostBinding e @HostListener no Angular. | `@Directive`, `@HostBinding`, `@HostListener`, `@Input`, `Attribute e Property Binding` |
 | *(Próximo Projeto)* | *Em breve...* | *Stack técnica...* |
 
 ---
