@@ -126,4 +126,4 @@ src/
 
 Este projeto é de código aberto e pode ser usado livremente, considere dar uma estrela para apoiar.
 
-Desenvolvido por Bruno Santa Rosa - [LinkedIn](https://www.linkedin.com/in/bruno-santarosa)
+Desenvolvido por Bruno Santa Rosa - [LinkedIn](https://www.linkedin.com/in/bhsantarosa)
