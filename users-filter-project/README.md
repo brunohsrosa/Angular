@@ -1,27 +1,129 @@
-# UsersFilterProject
+# 🎯 Users Filter Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+Aplicação Angular para filtrar e visualizar uma lista de usuários com detalhes completos.
 
-## Development server
+## 📋 Descrição do Projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este projeto é uma aplicação web desenvolvida em **Angular 16** e **Node.js 18+**, utilizando TypeScript para gerenciamento de usuários. Permite filtrar usuários por nome, status, data de cadastro e visualizar detalhes individuais.
 
-## Code scaffolding
+## 🎯 Objetivo do Projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O objetivo é demonstrar o uso de componentes Angular, pipes personalizados e filtros dinâmicos para manipulação de dados de usuários em uma interface amigável.
 
-## Build
+### 🏷️ Badges
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![Angular](https://img.shields.io/badge/Angular-16-red)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.1-blue)
+![Node.js](https://img.shields.io/badge/Node.js-18+-green)
 
-## Running unit tests
+### 🛠️ Tecnologias Utilizadas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Angular 16
+- TypeScript 5.1
+- Angular Material
+- SCSS
+- RxJS
+- date-fns
 
-## Running end-to-end tests
+## 📚 Conceitos Utilizados
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+| Conceito | Descrição |
+|----------|-----------|
+| Componentes Angular | Blocos reutilizáveis de UI, como FilterComponent, UsersListComponent e UserDetailsComponent |
+| Pipes Personalizados | Transformadores de dados, como PhonePipe para formatação de telefone e AddressPipe para endereços |
+| Interfaces TypeScript | Definições de tipos para usuários, endereços e opções de filtro |
+| Módulos Angular | Organização do código em módulos, como ComponentsModule e PipesModule |
+| Angular Material | Biblioteca de componentes UI para design consistente |
+| Filtros Dinâmicos | Lógica de filtragem usando funções utilitárias e date-fns para intervalos de datas |
+| Data Binding | Vinculação de dados entre componentes pai e filho via @Input e @Output |
+| Lifecycle Hooks | Uso de ngOnInit para inicialização de componentes |
 
-## Further help
+## 🚀 Como Executar o Projeto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Siga os passos abaixo para executar o projeto localmente:
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/users-filter-project.git
+   cd users-filter-project
+   ```
+
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+
+3. **Execute o servidor de desenvolvimento:**
+   ```bash
+   ng serve
+   ```
+
+4. **Acesse a aplicação:**
+   Abra o navegador e vá para `http://localhost:4200`
+
+## 📁 Estrutura de Pastas
+
+```
+src/
+├── app/
+│   ├── app.component.html/ts/scss/spec.ts
+│   ├── app.module.ts
+│   ├── angular-material/
+│   │   └── angular-material.module.ts
+│   ├── components/
+│   │   ├── components.module.ts
+│   │   ├── filter/
+│   │   │   ├── filter.component.html/ts/scss/spec.ts
+│   │   ├── user-details/
+│   │   │   ├── user-details.component.html/ts/scss/spec.ts
+│   │   └── users-list/
+│   │       └── users-list.component.html/ts/scss/spec.ts
+│   ├── data/
+│   │   └── users-list.ts
+│   ├── interfaces/
+│   │   ├── filter-options.interface.ts
+│   │   └── user/
+│   │       ├── address.interface.ts
+│   │       ├── status.interface.ts
+│   │       └── user.interface.ts
+│   ├── pipes/
+│   │   ├── address.pipe.ts
+│   │   ├── dash-if-empty.pipe.ts
+│   │   ├── phone.pipe.ts
+│   │   ├── pipes.module.ts
+│   │   └── status.pipe.ts
+│   └── utils/
+│       └── filter-users-list.ts
+├── assets/
+├── styles/
+│   └── utils/
+│       └── _text-align-center.scss
+├── index.html
+├── main.ts
+└── styles.scss
+```
+
+## 📈 Aprendizados Principais
+
+- Implementação de componentes modulares e reutilizáveis em Angular
+- Criação e uso de pipes personalizados para formatação de dados
+- Manipulação de filtros complexos com datas usando bibliotecas externas
+- Organização de código com módulos e interfaces TypeScript
+- Integração do Angular Material para UI consistente
+- Gerenciamento de estado entre componentes com EventEmitters
+
+## 🔗 Recursos Úteis
+
+- [Documentação Oficial Angular - Componentes](https://angular.io/guide/component-overview)
+- [Documentação Oficial Angular - Pipes](https://angular.io/guide/pipes)
+- [Documentação Oficial Angular - Interfaces](https://angular.io/guide/typescript-configuration)
+- [Angular Material - Documentação](https://material.angular.io/)
+- [date-fns - Biblioteca para manipulação de datas](https://date-fns.org/)
+
+---
+
+## 📜 Licença
+
+Este projeto é de código aberto e pode ser usado livremente, considere dar uma estrela para apoiar.
+
+Desenvolvido por Bruno Santa Rosa - [LinkedIn](https://www.linkedin.com/in/bruno-santarosa)
