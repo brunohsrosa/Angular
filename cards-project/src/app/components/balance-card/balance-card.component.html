@@ -1,55 +1,34 @@
 <div class="balance-card">
 
   <div class="balance-card__header">
-    <div class="balance-card__header-title">
-      <img class="balance-card__header-icon" src="./assets/icons/icon-hand.png">
-      <h1>Saldos Disponíveis</h1>
-    </div>
-    <!-- <p>R$ 100</p> -->
+    <app-card-title title="Saldos Disponíveis" icon="icon-hand.png"></app-card-title>
+    <p>R$ 100</p>
   </div>
 
   <div class="balance-card__content">
-    <div class="balance-card__content-item">
-      <p>Conta Corrente</p>
-      <p>R$ 200</p>
-    </div>
-    <div class="balance-card__content-line"></div>
+    <app-card-item text="Conta Corrente" value="R$ 200,00"></app-card-item>
 
-    <div class="balance-card__content-item">
-      <p>Conta Corrente Saldo Vinculado</p>
-      <p>R$ 300</p>
-    </div>
-    <div class="balance-card__content-line"></div>
+    <app-card-line></app-card-line>
 
-    <div class="balance-card__content-item">
-      <p>Conta Poupança Saldo Vinculado</p>
-      <p>R$ 400</p>
-    </div>
-    <div class="balance-card__content-line"></div>
+    <app-card-item text="Conta Corrente Saldo Vinculado" value="R$ 300,00"></app-card-item>
 
-    <div class="balance-card__content-item">
-      <p>Investimentos com Baixa Automática</p>
-      <p>R$ 500</p>
-    </div>
-    <div class="balance-card__content-line"></div>
+    <app-card-line></app-card-line>
 
-    <div class="balance-card__content-item">
-      <p>Investimentos sem Baixa Automática</p>
-      <p>R$ 500</p>
-    </div>
-    <div class="balance-card__content-line"></div>
+    <app-card-item text="Conta Poupança Saldo Vinculado" value="R$ 400,00"></app-card-item>
+
+    <app-card-line></app-card-line>
+
+    <app-card-item text="Investimentos com Baixa Automática" value="R$ 500,00"></app-card-item>
+
+    <app-card-line></app-card-line>
+
+    <app-card-item text="Investimentos sem Baixa Automática" value="R$ 500,00"></app-card-item>
+
+    <app-card-line></app-card-line>
 
     <div class="balance-card__content-sumary">
-      <div class="balance-card__content-sumary-item">
-        <p>SALDO TOTAL</p>
-        <p>R$ 1000,00</p>
-      </div>
-
-      <div class="balance-card__content-sumary-item">
-        <p>LIVRE PARA MOVIMENTAÇÃO</p>
-        <p>R$ 1000,00</p>
-      </div>
+      <app-card-item text="SALDO TOTAL" value="R$ 1.000,00"></app-card-item>
+      <app-card-item text="LIVRE PARA MOVIMENTAÇÃO" value="R$ 1.000,00"></app-card-item>
     </div>
   </div>
-
 </div>

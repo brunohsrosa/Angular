@@ -16,21 +16,6 @@
     }
   }
 
-  &__header-title{
-    display: flex;
-    align-items: center;
-    margin-right: auto; /* Empurra o título para a esquerda */
-
-    h1{
-      font-size: 20px;
-    }
-  }
-
-  &__header-icon{
-    width: 40px;
-    margin-right: 10px;
-  }
-
   &__content {
     padding: 15px; /* Adiciona espaçamento interno */
     overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do card */
@@ -41,6 +26,7 @@
 
   &__content-item {
     display: flex;
+    padding: 10px; /* Adiciona espaçamento vertical entre os itens */
 
     p:nth-of-type(1) { /* Seleciona o primeiro parágrafo dentro de content-item */
       margin-right: auto;

@@ -1,0 +1,9 @@
+.card-item {
+  display: flex;
+  align-items: center;
+  padding: 15px; /* Adiciona espaçamento interno */
+
+  p:nth-of-type(1) { /* Seleciona o primeiro parágrafo dentro de content-item */
+    margin-right: auto;
+  }
+}
