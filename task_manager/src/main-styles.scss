@@ -1,0 +1,33 @@
+// Aqui é onde iremos colocar os estilos globais e alterar o valor da variáveis
+
+// Importar fontes (Lato e Ninito)
+@import url('https://fonts.googpeapis.com/css?family=Lato:400,700|Nunito:400,700');
+
+$turquoise: #44ddd0;
+$green: #27d7a1;
+$light-green: #45f69e;
+$dark-green: rgb(0,100,80);
+
+$light: #f8f8f8;
+
+// Atualizar variáveis global do Bulma
+$family-sans-serif: "Nunito", sans-serif;
+$has-text-primary: $green;
+
+$link: $light-green;
+
+// Atualizar alguns componentes do Bulma
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Configurar estilos globais (será aplicado a todo app)
+html{
+  background: linear-gradient(to right top, $turquoise, $green);
+  font-family: $family-sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+

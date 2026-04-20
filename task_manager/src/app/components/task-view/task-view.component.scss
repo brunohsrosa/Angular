@@ -1,0 +1,54 @@
+.centered-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.task-manager-container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  max-height: 680px;
+  //background-color: white;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+
+  width: 250px;
+  background-color: white;
+
+  padding: 42px;
+
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+  h1{
+    color: #27d7a1;
+  }
+}
+
+.task-list-container{
+  display: flex;
+  flex-grow: 1;
+
+  background-color: #f8f8f8;
+
+  padding: 42px;
+
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  h1{
+    color: #27d7a1;
+  }
+}
+
+.title{
+ letter-spacing: 2px;
+
+}
