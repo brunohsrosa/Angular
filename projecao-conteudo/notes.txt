@@ -1,0 +1,6 @@
+Notes
+
+- Os componentes que projetam conteúdo devem ter apenas os estilos,
+  lógicas que sejam comuns a todas as implementações
+
+- Para alterar os estilos e lógicas individuais, utilizar o componente pai

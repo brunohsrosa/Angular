@@ -1,0 +1,35 @@
+.container{
+  width: 100%; /* Define a largura total do container */
+  display: flex; /* Define o layout como flexbox, que permite o alinhamento e distribuição de elementos filhos */
+  justify-content: space-around; /* Define o espaçamento entre os elementos filhos, distribuindo-os uniformemente ao longo do eixo principal */
+}
+
+.card{
+
+  &__header{
+    width: 100%; /* Define a largura total do header do card */
+    height: 100%; /* Define a altura total do header do card */
+
+    display: flex; /* Define o layout como flexbox, permitindo o alinhamento e distribuição de elementos filhos */
+    justify-content: center; /* Centraliza os elementos filhos horizontalmente */
+    align-items: center; /* Centraliza os elementos filhos verticalmente */
+
+    &__direction-column{
+      flex-direction: column; /* Define a direção dos elementos filhos como coluna, empilhando-os verticalmente */
+    }
+  }
+
+  &__image{
+    width: 150px; /* Define a largura da imagem do card */
+    height: 150px; /* Define a altura da imagem do card */
+  }
+
+  &__content{
+    width: 100%; /* Define a largura total do header do card */
+    height: 100%; /* Define a altura total do header do card */
+    text-align: justify;
+
+    display: flex; /* Define o layout como flexbox, permitindo o alinhamento e distribuição de elementos filhos */
+    justify-content: center;
+  }
+}
