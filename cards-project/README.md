@@ -4,6 +4,9 @@
 
 Aplicação Angular de interface de cartões financeiros e informações de cliente. O projeto demonstra uma tela de dashboard com componentes de cartão de saldo, cartão de crédito, cartão de débito e dados do cliente.
 
+<img width="1620" height="983" alt="image" src="https://github.com/user-attachments/assets/750eb285-e960-4cee-b13e-8482f076c456" />
+
+
 - Angular: **17.3.0**
 - Angular CLI: **17.3.17**
 - TypeScript: **5.4.2**
