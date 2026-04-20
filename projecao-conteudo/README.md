@@ -2,6 +2,8 @@
 
 Um projeto educacional que demonstra padrões avançados de desenvolvimento com Angular, focando em **projeção de conteúdo**, **diretivas personalizadas** e **modularização de componentes**.
 
+<img width="1910" height="993" alt="image" src="https://github.com/user-attachments/assets/c9d6ea57-7064-438e-81d8-2bd43b7405a4" />
+
 ---
 
 ## 📋 Índice
