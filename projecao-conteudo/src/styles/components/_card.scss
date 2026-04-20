@@ -1,0 +1,41 @@
+.ca-c-card {
+  max-width: 400px; /* Define a largura máxima do card */
+
+  &__header{
+    padding: 50px; /* Define o preenchimento interno do header */
+    height: 40%; /* Define a altura do header como 40% do card */
+    background-color: #ffad36; /* Define a cor de fundo do header */
+    display: block; /* Define o display como block para que o header ocupe toda a largura do card */
+  }
+
+  &__content{
+    padding: 50px; /* Define o preenchimento interno do conteúdo */
+    height: 60%; /* Define a altura do conteúdo como 60% do card */
+    background-color: #ff5916; /* Define a cor de fundo do conteúdo */
+    display: block; /* Define o display como block para que o conteúdo ocupe toda a largura do card */
+  }
+
+  &__main-text{
+    font-size: 30px; /* Define o tamanho da fonte do texto principal */
+    font-weight: 500; /* Define o peso da fonte do texto principal */
+  }
+
+  &__sub-text{
+    font-size: 18px; /* Define o tamanho da fonte do texto secundário */
+    font-weight: 300; /* Define o peso da fonte do texto secundário */
+    letter-spacing: 3px; /* Define o espaçamento entre as letras do texto secundário */
+  }
+
+  &__description-text{
+    font-size: 18px; /* Define o tamanho da fonte do texto de descrição */
+    font-weight: 300; /* Define o peso da fonte do texto de descrição */
+  }
+
+  &__small-image{
+    width: 100px; /* Define a largura da imagem pequena */
+  }
+
+  &__large-image{
+    width: 150px; /* Define a largura da imagem grande para ocupar toda a largura do card */
+  }
+}

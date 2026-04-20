@@ -1,19 +1,3 @@
-.card {
-  max-width: 400px; /* Define a largura máxima do card */
-
-  &__header{
-    padding: 50px; /* Define o preenchimento interno do header */
-    height: 40%; /* Define a altura do header como 40% do card */
-    background-color: #ffad36; /* Define a cor de fundo do header */
-  }
-
-  &__content{
-    padding: 50px; /* Define o preenchimento interno do conteúdo */
-    height: 60%; /* Define a altura do conteúdo como 60% do card */
-    background-color: #ff5916; /* Define a cor de fundo do conteúdo */
-  }
-}
-
 
 
 

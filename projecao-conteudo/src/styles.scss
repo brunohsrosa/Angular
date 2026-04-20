@@ -3,3 +3,5 @@ body {
   font-family: Poppins, sans-serif; /* Definir a fonte para toda a aplicação */
   background-color: darkgray; /* Definir a cor de fundo da página */
 }
+
+@import "./styles/components/card"; /* Importar os estilos do componente card */
