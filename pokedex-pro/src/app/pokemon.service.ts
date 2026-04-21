@@ -13,13 +13,19 @@ export class PokemonService {
 
   constructor(private http: HttpClient) { }
 
-  getPokemons(p0: string): Observable<any>{
+  getPokemons(p0: string): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }
 
   getPokemonByName(name: string): Observable<any> {
-  return this.http.get<any>(this.allPokemonsUrl).pipe(
-    map(res => res.results)
-  )
-}
+    return this.http.get<any>(this.allPokemonsUrl).pipe(
+      map(res => res.results)
+    )
+  }
+
+  getPokemonDetails(url: string): Observable<any> {
+    // Usamos a URL que veio na listagem para pegar os detalhes completos
+    return this.http.get<any>(url);
+  }
+
 }

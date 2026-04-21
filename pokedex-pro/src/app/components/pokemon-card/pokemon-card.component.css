@@ -1,25 +1,190 @@
 .card {
-  background: white;
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden; /* Importante para a cor de cima não vazar nas bordas arredondadas */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border: none;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
-.card img {
-  width: 120px;
-  height: 120px;
+/* Parte Colorida */
+.card-header {
+  padding: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
 }
 
 .number {
-  color: #ccc;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: rgba(255, 255, 255, 0.6); /* Branco semi-transparente fica elegante */
   font-weight: bold;
-  display: block;
+  font-size: 0.9em;
+}
+
+.img-container img {
+  width: 120px;
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.2));
+  z-index: 1;
+}
+
+/* Parte Branca */
+.card-body {
+  background-color: white;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.card-body h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.types {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.types span {
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Layout do Modal Horizontal */
+.modal-horizontal {
+  display: flex;
+  width: 90%;
+  max-width: 600px;
+  height: auto; /* Deixa crescer conforme o conteúdo */
+  min-height: 350px;
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+.modal-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal-left img {
+  width: 200px;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.2));
+}
+
+.modal-number {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgba(255,255,255,0.5);
+}
+
+.modal-right {
+  flex: 1.2;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border: none;
+  background: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.modal-right h2 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.modal-types {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-types span {
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.modal-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.modal-stats {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stat-name {
+  width: 40px;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #888;
+}
+
+.stat-bar-bg {
+  flex: 1;
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease-in-out; /* Efeito de carregamento da barra */
+}
+
+.stat-value {
+  width: 30px;
+  font-size: 0.8em;
+  font-weight: bold;
   text-align: right;
+  color: #333;
 }
