@@ -1,4 +1,36 @@
-📌 O que é Angular (visão geral)
+
+# 📘 Angular – Guia Completo de Conceitos Fundamentais
+
+Este documento reúne os **principais conceitos teóricos e práticos do Angular**, organizados de forma clara, progressiva e bem identada, com o objetivo de servir como **material de estudo, fixação de conceitos e consulta futura**.
+
+---
+
+
+
+## 📑 Sumário
+
+- [Angular: Visão Geral](#-o-que-é-angular-visão-geral)
+- [Componentes (Component)](#-componentes-component)
+- [DOM – Document Object Model](#-dom-document-object-model)
+- [Data Binding](#-data-binding-ligação-de-dados)
+- [Inputs e Outputs](#-inputs-e--outputs)
+- [Diretivas](#-diretivas-directives)
+- [HostListener e HostBinding](#-hostbinding-e-hostlistener)
+- [BEM (Block, Element, Modifier)](#-bem-block-element-modifier)
+- [Rotas (Angular Router)](#-rotas-angular-router)
+- [Guards](#-guards)
+- [Injeção de Dependência](#-injeção-de-dependência-dependency-injection)
+- [Services](#-services)
+- [Ciclo de Vida dos Componentes](#-ciclo-de-vida-lifecycle-hooks)
+- [RxJS e Programação Reativa](#-rxjs-e-observables)
+- [Módulos e Standalone Components](#-módulos-ngmodule)
+- [Boas Práticas Gerais](#-boas-práticas-gerais)
+
+
+
+
+
+# 📌 O que é Angular (visão geral)
 ==========================
 
 Angular é um **framework front-end** baseado em **TypeScript**, criado para desenvolver **Single Page Applications (SPA)**, usando:
@@ -15,7 +47,7 @@ Angular é um **framework front-end** baseado em **TypeScript**, criado para des
 
 <br>
 
-🧩 Componentes (Component)
+# 🧩 Componentes (Component)
 ==========================
 
 ✅ O que é um componente?
@@ -53,7 +85,7 @@ export class ExemploComponent {}
     
 <br>
 
-🌳 DOM (Document Object Model)
+# 🌳 DOM (Document Object Model)
 ==============================
 
 ✅ O que é o DOM?
@@ -94,7 +126,7 @@ export class ExemploComponent {}
 
 <br>
 
-🧠 Data Binding (Ligação de dados)
+# 🧠 Data Binding (Ligação de dados)
 ==================================
 
 Tipos principais:
@@ -132,7 +164,7 @@ Tipos principais:
 
 <br>
 
-📥 Inputs e 📤 Outputs
+# 📥 Inputs e 📤 Outputs
 ======================
 
 ✅ @Input
@@ -175,7 +207,7 @@ this.fechado.emit(true);
 
 <br>
 
-🧷 Diretivas (Directives)
+# 🧷 Diretivas (Directives)
 =========================
 
 Tipos de diretivas:
@@ -213,7 +245,7 @@ Modificam **aparência ou comportamento**
 
 <br>
 
-🧠 HostBinding e HostListener
+# 🧠 HostBinding e HostListener
 =============================
 
 ✅ @HostBinding
@@ -254,7 +286,7 @@ Eventos comuns:
 
 <br>
 
-🧩 ElementRef
+# 🧩 ElementRef
 =============
 
 ✅ O que é?
@@ -276,7 +308,7 @@ constructor(private el: ElementRef) {}
 
 <br>
 
-🎨 Renderer2
+# 🎨 Renderer2
 ============
 
 Forma **segura** de manipular DOM:
@@ -297,7 +329,7 @@ this.renderer.addClass(this.el.nativeElement, 'ativo');
 
 <br>
 
-🧱 BEM (Block, Element, Modifier)
+# 🧱 BEM (Block, Element, Modifier)
 =================================
 
 ✅ O que é BEM?
@@ -330,7 +362,7 @@ bloco__elemento--modificador
 
 <br>
 
-🛣️ Rotas (Angular Router)
+# 🛣️ Rotas (Angular Router)
 ==========================
 
 ✅ O que são rotas?
@@ -364,7 +396,7 @@ const routes: Routes = [
 
 <br>
 
-🔐 Guards
+# 🔐 Guards
 =========
 
 Controlam acesso às rotas
@@ -387,7 +419,7 @@ Tipos:
 
 <br>
 
-💉 Injeção de Dependência (Dependency Injection)
+# 💉 Injeção de Dependência (Dependency Injection)
 ================================================
 
 ✅ Conceito
@@ -413,7 +445,7 @@ constructor(private userService: UserService) {}
 
 <br>
 
-🧰 Services
+# 🧰 Services
 ===========
 
 ✅ O que é?
@@ -431,7 +463,7 @@ export class UserService {}
 
 <br>
 
-🔄 Ciclo de vida (Lifecycle Hooks)
+# 🔄 Ciclo de vida (Lifecycle Hooks)
 ==================================
 
 Principais hooks:
@@ -454,7 +486,7 @@ ngOnInit() {
 
 <br>
 
-⚡ RxJS e Observables
+# ⚡ RxJS e Observables
 ====================
 
 Angular usa **programação reativa**
@@ -479,7 +511,7 @@ Conceitos importantes:
 
 <br>
 
-📦 Módulos (NgModule)
+# 📦 Módulos (NgModule)
 =====================
 
 Organizam a aplicação
@@ -497,7 +529,7 @@ export class AppModule {}
 
 ✅ Com Angular moderno, **Standalone Components** estão substituindo módulos
 
-✅ Boas práticas para anotar
+# ✅ Boas práticas gerais
 ===========================
 
 ✔ Componentes pequenos
