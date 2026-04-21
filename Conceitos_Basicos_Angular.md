@@ -528,9 +528,9 @@ export class AppModule {}
 # ✅ Boas práticas gerais
 
 
-✔ Componentes pequenos
-✔ Services para lógica
-✔ Evitar manipular DOM direto
-✔ CSS escopado + BEM
-✔ Usar RxJS corretamente
-✔ Separar responsabilidades
+✔ Componentes pequenos.
+✔ Services para lógica.
+✔ Evitar manipular DOM direto.
+✔ CSS escopado + BEM.
+✔ Usar RxJS corretamente.
+✔ Separar responsabilidades.
