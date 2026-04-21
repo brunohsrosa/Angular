@@ -1,0 +1,15 @@
+<app-search-bar (searchChanged)="onSearchChanged($event)"></app-search-bar>
+
+<div class="grid-container" *ngIf="pokemons.length > 0; else noResults">
+  <app-pokemon-card
+    *ngFor="let poke of pokemons"
+    [pokemon]="poke">
+  </app-pokemon-card>
+</div>
+
+<ng-template #noResults>
+  <div style="text-align: center; padding: 50px;">
+    <p>Nenhum Pokémon encontrado.</p>
+    <button (click)="resetSearch()">Voltar</button>
+  </div>
+</ng-template>
