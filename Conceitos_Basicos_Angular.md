@@ -31,7 +31,6 @@ Este documento reúne os **principais conceitos teóricos e práticos do Angular
 
 
 # 📌 O que é Angular (visão geral)
-==========================
 
 Angular é um **framework front-end** baseado em **TypeScript**, criado para desenvolver **Single Page Applications (SPA)**, usando:
 
@@ -48,7 +47,7 @@ Angular é um **framework front-end** baseado em **TypeScript**, criado para des
 <br>
 
 # 🧩 Componentes (Component)
-==========================
+
 
 ✅ O que é um componente?
 ------------------------
@@ -86,7 +85,7 @@ export class ExemploComponent {}
 <br>
 
 # 🌳 DOM (Document Object Model)
-==============================
+
 
 ✅ O que é o DOM?
 ----------------
@@ -127,7 +126,6 @@ export class ExemploComponent {}
 <br>
 
 # 🧠 Data Binding (Ligação de dados)
-==================================
 
 Tipos principais:
 -----------------
@@ -165,7 +163,7 @@ Tipos principais:
 <br>
 
 # 📥 Inputs e 📤 Outputs
-======================
+
 
 ✅ @Input
 --------
@@ -208,7 +206,7 @@ this.fechado.emit(true);
 <br>
 
 # 🧷 Diretivas (Directives)
-=========================
+
 
 Tipos de diretivas:
 -------------------
@@ -246,7 +244,6 @@ Modificam **aparência ou comportamento**
 <br>
 
 # 🧠 HostBinding e HostListener
-=============================
 
 ✅ @HostBinding
 --------------
@@ -287,7 +284,7 @@ Eventos comuns:
 <br>
 
 # 🧩 ElementRef
-=============
+
 
 ✅ O que é?
 ----------
@@ -309,7 +306,7 @@ constructor(private el: ElementRef) {}
 <br>
 
 # 🎨 Renderer2
-============
+
 
 Forma **segura** de manipular DOM:
 
@@ -330,7 +327,7 @@ this.renderer.addClass(this.el.nativeElement, 'ativo');
 <br>
 
 # 🧱 BEM (Block, Element, Modifier)
-=================================
+
 
 ✅ O que é BEM?
 --------------
@@ -363,7 +360,6 @@ bloco__elemento--modificador
 <br>
 
 # 🛣️ Rotas (Angular Router)
-==========================
 
 ✅ O que são rotas?
 ------------------
@@ -397,7 +393,7 @@ const routes: Routes = [
 <br>
 
 # 🔐 Guards
-=========
+
 
 Controlam acesso às rotas
 
@@ -420,7 +416,7 @@ Tipos:
 <br>
 
 # 💉 Injeção de Dependência (Dependency Injection)
-================================================
+
 
 ✅ Conceito
 ----------
@@ -446,7 +442,7 @@ constructor(private userService: UserService) {}
 <br>
 
 # 🧰 Services
-===========
+
 
 ✅ O que é?
 ----------
@@ -464,7 +460,7 @@ export class UserService {}
 <br>
 
 # 🔄 Ciclo de vida (Lifecycle Hooks)
-==================================
+
 
 Principais hooks:
 
@@ -487,7 +483,7 @@ ngOnInit() {
 <br>
 
 # ⚡ RxJS e Observables
-====================
+
 
 Angular usa **programação reativa**
 
@@ -512,7 +508,7 @@ Conceitos importantes:
 <br>
 
 # 📦 Módulos (NgModule)
-=====================
+
 
 Organizam a aplicação
 
@@ -530,7 +526,7 @@ export class AppModule {}
 ✅ Com Angular moderno, **Standalone Components** estão substituindo módulos
 
 # ✅ Boas práticas gerais
-===========================
+
 
 ✔ Componentes pequenos
 ✔ Services para lógica
