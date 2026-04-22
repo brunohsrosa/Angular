@@ -2,6 +2,10 @@
 
 Uma aplicação web moderna para explorar e descobrir informações sobre Pokémons usando Angular 17 e a PokeAPI. Navegue por um catálogo completo com mais de 1.500 Pokémons, busque por nome, filtre por tipo, visualize cards interativos com detalhes e explore diferentes gerações com uma interface responsiva e intuitiva.
 
+<img width="1260" height="1071" alt="image" src="https://github.com/user-attachments/assets/30daea58-b35f-4f33-8b0b-261f19d380d1" />
+<img width="1276" height="1088" alt="image" src="https://github.com/user-attachments/assets/2b71bd87-59cd-4960-a090-4422d364fe7a" />
+
+
 ---
 
 ## 📋 Índice
