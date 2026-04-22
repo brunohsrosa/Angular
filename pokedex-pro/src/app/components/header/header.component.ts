@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild, viewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +11,9 @@ export class HeaderComponent {
   @Output() searchChanged = new EventEmitter<string>();
   @Output() typeChanged = new EventEmitter<string>();
 
+ // Captura o elemento #searchInput do HTML
+  @ViewChild('searchInput') searchInput!: ElementRef<HTMLInputElement>;
+
   onSearch(event: any) {
     const value = event.target.value;
     // Emitimos o valor para quem estiver ouvindo o Header
@@ -19,6 +22,12 @@ export class HeaderComponent {
 
   // Aproveite e já deixe os métodos dos filtros prontos (mesmo que vazios por enquanto)
   filterByType(type: string) {
+
+    //Limpa o valor do input usando a referência capturada pelo ViewChild
+    if (this.searchInput) {
+      this.searchInput.nativeElement.value = '';
+    }
+
     if (type === 'all') {
       // Se quiser limpar visualmente o campo de busca no Header:
       const searchInput = document.querySelector('.search-container input') as HTMLInputElement;

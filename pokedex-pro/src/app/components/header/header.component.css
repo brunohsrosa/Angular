@@ -45,9 +45,11 @@
 /* Navegação Superior */
 .nav-container {
   display: flex;
+  width: 100%;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 50px;
+  background-color: white;
 }
 
 
@@ -58,6 +60,8 @@
   color: #666;
   font-weight: 500;
 }
+
+
 
 .nav-links li { cursor: pointer; transition: 0.3s; }
 .nav-links li.active { color: #6e45e2; border-bottom: 2px solid #6e45e2; }

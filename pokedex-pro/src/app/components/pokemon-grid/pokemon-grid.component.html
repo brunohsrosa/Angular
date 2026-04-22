@@ -8,7 +8,10 @@
 </div>
 
 <div class="load-more-container">
-  <button class="load-more-btn" (click)="loadMore()">
+  <button class="load-more-btn"
+          (click)="loadMore()"
+          [disabled]="!hasMorePokemons"
+         [class.disabled]="!hasMorePokemons">
     <span>+</span> Carregar Mais
   </button>
 </div>

@@ -1,6 +1,6 @@
 # 🎯 Pokedex Pro
 
-Uma aplicação web moderna para explorar e descobrir informações sobre Pokémons usando Angular 17 e a PokeAPI. Navegue por um catálogo completo com mais de 1.500 Pokémons, busque por nome, visualize cards interativos e explore diferentes gerações.
+Uma aplicação web moderna para explorar e descobrir informações sobre Pokémons usando Angular 17 e a PokeAPI. Navegue por um catálogo completo com mais de 1.500 Pokémons, busque por nome, filtre por tipo, visualize cards interativos com detalhes e explore diferentes gerações com uma interface responsiva e intuitiva.
 
 ---
 
@@ -19,9 +19,9 @@ Uma aplicação web moderna para explorar e descobrir informações sobre Pokém
 
 ## 📖 Descrição do Projeto
 
-**Pokedex Pro** é uma aplicação desenvolvida em **Angular 17.3.0** com **TypeScript 5.4.2**, oferecendo uma experiência interativa e responsiva para consultar dados de Pokémons.
+**Pokedex Pro** é uma aplicação desenvolvida em **Angular 17.3.0** com **TypeScript 5.4.2**, oferecendo uma experiência interativa e responsiva para consultar dados de Pokémons com funcionalidades avançadas de busca e filtragem.
 
-A aplicação integra-se com a **PokeAPI**, uma API RESTful gratuita que fornece dados completos sobre todos os Pokémons das diferentes gerações. O projeto utiliza **componentes standalone** do Angular moderno, garantindo uma estrutura limpa, modular e escalável.
+A aplicação integra-se com a **PokeAPI**, uma API RESTful gratuita que fornece dados completos sobre todos os Pokémons das diferentes gerações. O projeto utiliza **componentes standalone** do Angular moderno com gerenciamento de estado reativo, garantindo uma estrutura limpa, modular e altamente escalável.
 
 **Versões:**
 - 🔷 **Angular**: 17.3.0
@@ -34,7 +34,7 @@ A aplicação integra-se com a **PokeAPI**, uma API RESTful gratuita que fornece
 
 ### Objetivo
 
-Criar uma aplicação web moderna que permita aos usuários explorar o universo Pokémon de forma intuitiva e eficiente, aplicando conceitos avançados do Angular 17 como componentes standalone, reatividade com RxJS e integração com APIs externas.
+Criar uma aplicação web moderna e responsiva que permita aos usuários explorar o universo Pokémon de forma intuitiva e eficiente. O projeto aplica conceitos avançados do Angular 17 como componentes standalone, gerenciamento de estado reativo, acesso ao DOM com ViewChild, filtragem em tempo real e integração com APIs externas, demonstrando boas práticas de desenvolvimento Angular moderno.
 
 ### Badges
 
@@ -69,14 +69,17 @@ Criar uma aplicação web moderna que permita aos usuários explorar o universo 
 | **Dependency Injection** | Padrão de injeção de dependências para melhor testabilidade e manutenibilidade do código |
 | **RxJS Observables** | Streams reativos para lidar com operações assíncronas como requisições HTTP e eventos do usuário |
 | **Operators RxJS** | `debounceTime()`, `distinctUntilChanged()`, `map()` para otimizar e transformar dados |
-| **Two-Way Binding** | `[(ngModel)]` para sincronização bidirecional entre template e componente |
+| **ViewChild e ElementRef** | Acesso direto aos elementos do DOM para interações e manipulações do template |
 | **Event Emitters** | `@Output()` e `EventEmitter` para comunicação entre componentes pais e filhos |
-| **HttpClient** | Cliente HTTP integrado para requisições GET à PokeAPI |
+| **HttpClient** | Cliente HTTP integrado para requisições GET à PokeAPI com filtragem de dados |
 | **Async Pipe** | Pipe do Angular para gerenciar Observables automaticamente no template |
 | **ngFor e ngIf** | Diretivas estruturais para renderização condicional e repetição de elementos |
-| **CSS Responsivo** | Estilos adaptativos para diferentes tamanhos de tela |
+| **CSS Responsivo** | Estilos adaptativos para diferentes tamanhos de tela com layout moderno |
 | **Interfaces TypeScript** | Tipagem forte com interfaces para modelos de dados (Pokemon) |
 | **AppConfig** | Configuração centralizada da aplicação com providers de roteamento e HTTP |
+| **Subject e Filtragem** | RxJS Subject para gerenciar fluxos de busca e filtros em tempo real |
+| **Paleta de Cores Dinâmica** | Mapeamento de cores por tipo de Pokémon para UI contextualizada |
+| **Internacionalização Básica** | Traduções de tipos e stats para português brasileiro |
 
 ---
 
@@ -157,47 +160,41 @@ pokedex-pro/
 │   ├── 📄 styles.css                  # Estilos globais
 │   │
 │   └── 🗂️ app/                        # Módulo principal da aplicação
-│       ├── 📄 app.component.ts        # Componente raiz
+│       ├── 📄 app.component.ts        # Componente raiz (standalone)
 │       ├── 📄 app.component.html      # Template do componente raiz
 │       ├── 📄 app.component.css       # Estilos do componente raiz
 │       ├── 📄 app.component.spec.ts   # Testes do componente raiz
 │       ├── 📄 app.config.ts           # Configuração da aplicação (providers)
-│       ├── 📄 app.routes.ts           # Rotas da aplicação
-│       ├── 📄 pokemon.service.ts      # Serviço para API de Pokémons
-│       ├── 📄 pokemon.service.spec.ts # Testes do serviço
+│       ├── 📄 app.routes.ts           # Definição de rotas
+│       ├── 📄 pokemon.service.ts      # Serviço para integração com PokeAPI
+│       ├── 📄 pokemon.service.spec.ts # Testes unitários do serviço
 │       │
-│       ├── 🗂️ components/             # Componentes reutilizáveis
+│       ├── 🗂️ components/             # Componentes reutilizáveis (standalone)
 │       │   ├── 🗂️ header/
-│       │   │   ├── 📄 header.component.ts
-│       │   │   ├── 📄 header.component.html
-│       │   │   ├── 📄 header.component.css
-│       │   │   └── 📄 header.component.spec.ts
+│       │   │   ├── 📄 header.component.ts      # Componente de cabeçalho com busca
+│       │   │   ├── 📄 header.component.html    # Template do cabeçalho
+│       │   │   ├── 📄 header.component.css     # Estilos do cabeçalho
+│       │   │   └── 📄 header.component.spec.ts # Testes do cabeçalho
 │       │   │
 │       │   ├── 🗂️ pokemon-grid/
-│       │   │   ├── 📄 pokemon-grid.component.ts
-│       │   │   ├── 📄 pokemon-grid.component.html
-│       │   │   ├── 📄 pokemon-grid.component.css
-│       │   │   └── 📄 pokemon-grid.component.spec.ts
+│       │   │   ├── 📄 pokemon-grid.component.ts      # Grid com filtragem e paginação
+│       │   │   ├── 📄 pokemon-grid.component.html    # Template do grid
+│       │   │   ├── 📄 pokemon-grid.component.css     # Estilos do grid
+│       │   │   └── 📄 pokemon-grid.component.spec.ts # Testes do grid
 │       │   │
-│       │   ├── 🗂️ pokemon-card/
-│       │   │   ├── 📄 pokemon-card.component.ts
-│       │   │   ├── 📄 pokemon-card.component.html
-│       │   │   ├── 📄 pokemon-card.component.css
-│       │   │   └── 📄 pokemon-card.component.spec.ts
-│       │   │
-│       │   └── 🗂️ search-bar/
-│       │       ├── 📄 search-bar.component.ts
-│       │       ├── 📄 search-bar.component.html
-│       │       ├── 📄 search-bar.component.css
-│       │       └── 📄 search-bar.component.spec.ts
+│       │   └── 🗂️ pokemon-card/
+│       │       ├── 📄 pokemon-card.component.ts      # Card individual do Pokémon
+│       │       ├── 📄 pokemon-card.component.html    # Template do card
+│       │       ├── 📄 pokemon-card.component.css     # Estilos do card
+│       │       └── 📄 pokemon-card.component.spec.ts # Testes do card
 │       │
 │       ├── 🗂️ models/                 # Interfaces e tipos TypeScript
 │       │   └── 📄 pokemon.model.ts    # Interface Pokemon
 │       │
-│       └── 🗂️ styles/                 # Utilitários de estilo
-│           ├── 📄 pokemon-colors.ts   # Paleta de cores por tipo
-│           ├── 📄 pokemon-color.ts    # Mapeamento de cores
-│           └── 📄 pokemon-translations.ts  # Traduções para português
+│       └── 🗂️ styles/                 # Utilitários de estilo e configurações
+│           ├── 📄 pokemon-color.ts    # Mapeamento de cores por tipo
+│           ├── 📄 pokemon-colors.ts   # Paleta completa de cores
+│           └── 📄 pokemon-translations.ts  # Traduções para português (tipos e stats)
 │
 ├── 🗂️ assets/                         # Recursos estáticos
 │   └── 🗂️ images/                     # Imagens da aplicação
@@ -207,57 +204,72 @@ pokedex-pro/
 
 ### Descrição dos Diretórios Principais
 
-- **src/app/components/**: Componentes reutilizáveis da aplicação (header, cards, grid, busca)
-- **src/app/models/**: Interfaces TypeScript que definem a estrutura dos dados
-- **src/app/styles/**: Utilitários de estilo e configurações de cores
+- **src/app/components/**: Componentes reutilizáveis standalone da aplicação
+  - `header/`: Componente com campo de busca integrado e filtros
+  - `pokemon-grid/`: Gerencia a lista de Pokémons com filtragem, busca e paginação
+  - `pokemon-card/`: Card individual com detalhes do Pokémon e cores temáticas
+  
+- **src/app/models/**: Interfaces TypeScript para tipagem forte dos dados
+
+- **src/app/styles/**: Utilitários de configuração visual (cores e traduções)
+
+- **src/app/services/**: Serviço de integração com PokeAPI
+
 - **src/assets/**: Recursos estáticos como imagens e ícones
-- **dist/**: Gerado automaticamente com `ng build` contendo a aplicação otimizada
 
 ---
 
 ## 💡 Aprendizados Principais
 
 ### 1. **Componentes Standalone do Angular 17**
-   - Entender como criar componentes independentes sem necessidade de módulos
+   - Criar componentes independentes sem necessidade de módulos
    - Usar `standalone: true` para maior flexibilidade e modularidade
-   - Importar dependências diretamente nos componentes
+   - Importar dependências diretamente no componente com `imports: []`
 
-### 2. **Serviços e Injeção de Dependência**
+### 2. **Gerenciamento de Estado Reativo**
+   - Usar RxJS Subject para gerenciar fluxos de busca e filtros
+   - Implementar padrão de estado com `allPokemons`, `filteredList`, `pokemons`
+   - Separar dados brutos, filtrados e exibidos para melhor performance
+
+### 3. **Acesso ao DOM com ViewChild**
+   - Usar `@ViewChild()` para acessar elementos específicos do template
+   - Trabalhar com `ElementRef` para manipulação direta do DOM
+   - Integrar validações de entrada de dados
+
+### 4. **Serviços e Integração com APIs**
    - Criar serviços reutilizáveis com `@Injectable()`
-   - Consumir APIs externas com `HttpClient`
-   - Gerenciar estado da aplicação através de serviços centralizados
+   - Consumir múltiplos endpoints da API (listagem, tipos, detalhes)
+   - Implementar método `getPokemonByType()` para filtragem
 
-### 3. **RxJS e Reatividade**
-   - Trabalhar com Observables para operações assíncronas
-   - Usar operators como `debounceTime()` e `distinctUntilChanged()` para otimizar performance
-   - Implementar busca em tempo real sem sobrecarregar a API
+### 5. **RxJS para Operações Assíncronas**
+   - Usar `debounceTime()` para evitar múltiplas requisições em buscas
+   - Aplicar `distinctUntilChanged()` para ignorar valores duplicados
+   - Gerenciar subscribers com boas práticas
 
-### 4. **Comunicação entre Componentes**
-   - Usar `@Input()` para passar dados do pai para o filho
+### 6. **Filtragem e Busca em Tempo Real**
+   - Implementar busca com debounce para otimizar performance
+   - Criar sistema de filtros múltiplos (nome e tipo)
+   - Resetar paginação ao mudar filtros
+
+### 7. **Paleta de Cores Dinâmica**
+   - Mapear cores por tipo de Pokémon
+   - Criar UI contextualizada visualmente
+   - Usar objetos constantes para dados estáticos reutilizáveis
+
+### 8. **Internacionalização (i18n) Básica**
+   - Criar arquivo de traduções para português
+   - Traduzir types e stats da API para melhor UX
+   - Manter código escalável para múltiplos idiomas
+
+### 9. **Comunicação entre Componentes**
+   - Usar `@Input()` para passar dados do pai para filho
    - Usar `@Output()` e `EventEmitter` para comunicação reversa
-   - Implementar padrões de comunicação eficientes
+   - Implementar padrões eficientes de data binding
 
-### 5. **Integração com APIs Externas**
-   - Consumir dados da PokeAPI de forma eficiente
-   - Tratar erros e exceções em requisições HTTP
-   - Implementar tratamento de dados assíncronos
-
-### 6. **Boas Práticas em Angular**
-   - Organização de código limpo e modular
-   - Separação de responsabilidades (componentes, serviços, modelos)
-   - Componentização de funcionalidades reutilizáveis
-   - Tipagem forte com TypeScript
-
-### 7. **Performance e Otimização**
-   - Implementar debouncing em campos de busca
-   - Evitar multiple subscriptions com async pipe
-   - Otimizar renderização com `trackBy` em listas
-   - Lazy loading de dados com paginação
-
-### 8. **Two-Way Binding e Reatividade**
-   - Sincronização bidirecional com `[(ngModel)]`
-   - Diretivas estruturais (`*ngFor`, `*ngIf`)
-   - Tratamento de eventos do DOM com `(evento)`
+### 10. **Performance e Otimização**
+   - Implementar paginação com `offset` e `limit`
+   - Usar `*ngFor` com `trackBy` para otimizar renderização
+   - Evitar múltiplas subscriptions com async pipe
 
 ---
 
