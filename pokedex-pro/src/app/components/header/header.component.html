@@ -1,3 +1,55 @@
-<header style="background: #3b4cca; color: white; padding: 20px;">
-  <h2>Pokédex Pro Header</h2>
+<header class="main-header">
+  <!-- <nav class="nav-container">
+    <div class="logo">
+      <img src="assets/images/pokeball.png" class="logo">
+    </div>
+    <ul class="nav-links">
+      <li class="active">Home</li>
+      <li>Types</li>
+      <li>Regions</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </nav> -->
+  
+
+  <div class="hero-section">
+    <h1>Pokédex <span>Pro</span></h1>
+    <p>Encontre seu Pokémon!</p>
+
+    <div class="search-wrapper">
+      <div class="search-container">
+        <input type="text" placeholder="Digite o nome ou ID do Pokémon..." (input)="onSearch($event)">
+        <i class="search-icon"></i>
+      </div>
+    </div>
+
+    <div class="type-filters">
+      <button class="filter-btn all" (click)="filterByType('all')">☀️ Todos</button>
+
+      <button class="filter-btn steel" (click)="filterByType('steel')">⚙️ Aço</button>
+      <button class="filter-btn water" (click)="filterByType('water')">💧 Água</button>
+      <button class="filter-btn dragon" (click)="filterByType('dragon')">🐲 Dragão</button>
+      <button class="filter-btn electric" (click)="filterByType('electric')">⚡ Elétrico</button>
+      <button class="filter-btn fairy" (click)="filterByType('fairy')">🧚 Fada</button>
+      <button class="filter-btn ghost" (click)="filterByType('ghost')">👻 Fantasma</button>
+      <button class="filter-btn fire" (click)="filterByType('fire')">🔥 Fogo</button>
+      <button class="filter-btn ice" (click)="filterByType('ice')">❄️ Gelo</button>
+      <button class="filter-btn bug" (click)="filterByType('bug')">🐞 Inseto</button>
+      <button class="filter-btn fighting" (click)="filterByType('fighting')">🥊 Lutador</button>
+      <button class="filter-btn normal" (click)="filterByType('normal')">🔘 Normal</button>
+      <button class="filter-btn rock" (click)="filterByType('rock')">🪨 Pedra</button>
+      <button class="filter-btn grass" (click)="filterByType('grass')">🌿 Planta</button>
+      <button class="filter-btn psychic" (click)="filterByType('psychic')">👁️ Psíquico</button>
+      <button class="filter-btn dark" (click)="filterByType('dark')">🌑 Sombrio</button>
+      <button class="filter-btn ground" (click)="filterByType('ground')">🏜️ Terra</button>
+      <button class="filter-btn poison" (click)="filterByType('poison')">☠️ Venenoso</button>
+      <button class="filter-btn flying" (click)="filterByType('flying')">🕊️ Voador</button>
+    </div>
+  </div>
 </header>
+
+
+<!-- <header style="background: #3b4cca; color: white; padding: 20px;">
+  <h2>Pokédex Pro Header</h2>
+</header> -->

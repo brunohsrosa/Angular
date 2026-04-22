@@ -1,0 +1,137 @@
+/*.main-header {
+  padding: 20px 0 40px;
+  background: linear-gradient(to bottom, #89a1db, #c575c7);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+}*/
+
+.main-header {
+  position: relative;
+  background: url('/assets/images/header-background.jpg') no-repeat center center fixed;
+  background-size: cover; /*Css padrão*/
+  background-position:  90%;
+  background-attachment: fixed;
+  min-height: 400px; /* Ajuste conforme necessário */
+  display: flex;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  filtro para o conteúdo não sumir no fundo */
+.main-header::before {
+  content: "";
+  position: absolute;
+
+  background: rgba(255, 255, 255, 0.2); /* Um véu branco suave */
+  /* Ou use um degradê que vai do transparente para o branco na base */
+  /*background: linear-gradient(to bottom, rgba(255,255,255,0) 60%, #ffffff 100%);*/
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2; /* Garante que fica acima do fundo */
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+}
+
+/* Navegação Superior */
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  color: #666;
+  font-weight: 500;
+}
+
+.nav-links li { cursor: pointer; transition: 0.3s; }
+.nav-links li.active { color: #6e45e2; border-bottom: 2px solid #6e45e2; }
+
+/* Hero Section */
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 5px;
+  color: #2d3436;
+  border: none;
+}
+
+.hero-section h1 span { color: #6311b6; }
+
+/* Barra de Busca com GLOW */
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 59px;
+  margin: 30px 0;
+}
+
+.search-container {
+  position: relative;
+  width: 600px;
+
+  padding: 2px;
+  border-radius: 20px;
+  /* O efeito de borda colorida da imagem */
+  background: linear-gradient(90deg, #ff2b36, #ff416c, #a445b2, #2941b95f, #a445b2, #14d437);
+}
+
+.search-container input {
+  width: 595px;
+  padding: 15px 25px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* Filtros de Tipos */
+.type-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 1150px;
+  margin: 20px auto;
+  padding: 20px;
+
+  /* Removendo a borda e fundo sólido */
+  border: none;
+  background: rgba(255, 255, 255, 0.15); /* Efeito vidro */
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+.filter-btn {
+  background: white;
+  border: none; /* Remova a borda se quiser algo mais limpo */
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Cores específicas dos botões (seguindo seu padrão) */
+.filter-btn.fire { border-color: #ff4b2b; color: #ff4b2b; }
+.filter-btn.water { border-color: #00d2ff; color: #00d2ff; }
+.filter-btn.grass { border-color: #2ecc71; color: #2ecc71; }

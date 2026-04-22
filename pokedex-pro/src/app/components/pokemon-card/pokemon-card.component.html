@@ -5,11 +5,13 @@
       <img [src]="getOfficialArtwork()" [alt]="pokemon.name">
     </div>
   </div>
+
   <div class="card-body">
     <h3>{{ pokemon.name | titlecase }}</h3>
     <div class="types" *ngIf="details">
-      <span *ngFor="let t of details.types" [style.background-color]="getTypeColor(t.type.name)">
-        {{ t.type.name }}
+      <span *ngFor="let t of details.types"
+            [style.background-color]="getTypeColor(t.type.name)">
+        {{ getTraducaoTipo(t.type.name) }}
       </span>
     </div>
   </div>
@@ -25,23 +27,32 @@
 
     <div class="modal-right">
       <button class="close-btn" (click)="toggleModal()">&times;</button>
+
       <h2>{{ pokemon.name | titlecase }}</h2>
+
       <div class="modal-types">
-        <span *ngFor="let t of details?.types" [style.background-color]="getTypeColor(t.type.name)">
-          {{ t.type.name }}
+        <span *ngFor="let t of details?.types"
+              [style.background-color]="getTypeColor(t.type.name)">
+          {{ getTraducaoTipo(t.type.name) }}
         </span>
       </div>
+
       <div class="modal-info" *ngIf="details">
         <p><strong>Altura:</strong> {{ details.height / 10 }} m</p>
         <p><strong>Peso:</strong> {{ details.weight / 10 }} kg</p>
       </div>
+
       <div class="modal-stats" *ngIf="details">
         <div class="stat-row" *ngFor="let s of details.stats">
-          <span class="stat-name">{{ s.stat.name | uppercase }}</span>
+          <span class="stat-name">{{ getTraducaoStat(s.stat.name) }}</span>
+
           <div class="stat-bar-bg">
-            <div class="stat-bar-fill" [style.width.%]="(s.base_stat / 200) * 100" [style.background-color]="cardColor">
+            <div class="stat-bar-fill"
+                 [style.width.%]="(s.base_stat / 200) * 100"
+                 [style.background-color]="cardColor">
             </div>
           </div>
+
           <span class="stat-value">{{ s.base_stat }}</span>
         </div>
       </div>
@@ -49,25 +60,3 @@
 
   </div>
 </div>
-<!-- <div class="card" (click)="mostrarTipo()">
-
-  <div class="card-header" [style.background-color]="cardColor">
-    <span class="number">#{{ (details?.id || getPokemonId()) | number:'3.0-0' }}</span>
-    <div class="img-container">
-      <img [src]="getOfficialArtwork()" [alt]="pokemon.name">
-    </div>
-  </div>
-
-  <div class="card-body">
-    <h3>{{ pokemon.name | titlecase }}</h3>
-
-    <div class="types" *ngIf="details">
-      <span
-        *ngFor="let t of details.types"
-        [style.background-color]="getTypeColor(t.type.name)">
-        {{ t.type.name | titlecase }}
-      </span>
-    </div>
-  </div>
-
-</div> -->

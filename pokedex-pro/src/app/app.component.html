@@ -1,2 +1,5 @@
-<app-header></app-header>
-<app-pokemon-grid></app-pokemon-grid>
+<app-header
+  (searchChanged)="grid.onSearchChanged($event)"
+  (typeChanged)="grid.onTypeChanged($event)">
+</app-header>
+<app-pokemon-grid #grid></app-pokemon-grid>>

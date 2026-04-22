@@ -1,10 +1,16 @@
-<app-search-bar (searchChanged)="onSearchChanged($event)"></app-search-bar>
+<!-- <app-search-bar (searchChanged)="onSearchChanged($event)"></app-search-bar> -->
 
 <div class="grid-container" *ngIf="pokemons.length > 0; else noResults">
   <app-pokemon-card
     *ngFor="let poke of pokemons"
     [pokemon]="poke">
   </app-pokemon-card>
+</div>
+
+<div class="load-more-container">
+  <button class="load-more-btn" (click)="loadMore()">
+    <span>+</span> Carregar Mais
+  </button>
 </div>
 
 <ng-template #noResults>

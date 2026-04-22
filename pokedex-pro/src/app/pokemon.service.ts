@@ -6,7 +6,7 @@ import { Observable, map } from 'rxjs';
   providedIn: 'root'
 })
 export class PokemonService {
-  private apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=20';
+  private apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=30';
 
   // Buscar os 1300+ pokemons (garante que pega todas as gerações)
   private allPokemonsUrl = 'https://pokeapi.co/api/v2/pokemon?limit=1500';
@@ -27,5 +27,12 @@ export class PokemonService {
     // Usamos a URL que veio na listagem para pegar os detalhes completos
     return this.http.get<any>(url);
   }
+
+  getPokemonByType(type: string): Observable<any> {
+  return this.http.get(`https://pokeapi.co/api/v2/type/${type}`);
+  }
+
+
+
 
 }

@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PokemonService } from '../../pokemon.service';
 import { POKEMON_COLORS } from '../../styles/pokemon-color';
+import { TRADUCOES_STATS, TRADUCOES_TIPOS } from '../../styles/pokemon-translations';
 
 @Component({
   selector: 'app-pokemon-card',
@@ -16,6 +17,9 @@ export class PokemonCardComponent implements OnInit {
   details: any;          // Guardar os tipos e ID real
   cardColor: string = '#f8f8f8'; // Cor padrão
   isModalOpen = false;
+
+  readonly traducoesTipos = TRADUCOES_TIPOS;
+  readonly traducoesStats = TRADUCOES_STATS;
 
   constructor(private pokemonService: PokemonService) { }
 
@@ -71,5 +75,14 @@ getTypeColor(typeName: string): string {
   cardClick(){
     //alert(this.getPokemonId());
     alert(this.mostrarTipo());
+  }
+
+  // Métodos auxiliares para o HTML
+  getTraducaoTipo(tipo: string): string {
+    return this.traducoesTipos[tipo.toLowerCase()] || tipo;
+  }
+
+  getTraducaoStat(stat: string): string {
+    return this.traducoesStats[stat.toLowerCase()] || stat;
   }
 }
