@@ -8,11 +8,8 @@
 
 .main-header {
   position: relative;
-  background: url('/assets/images/header-background.jpg') no-repeat center center fixed;
-  background-size: cover; /*Css padrão*/
-  background-position:  90%;
-  background-attachment: fixed;
-  min-height: 400px; /* Ajuste conforme necessário */
+  background: url('/assets/images/header-background.jpg') no-repeat ;
+ 
   display: flex;
   text-align: center;
   font-family: 'Poppins', sans-serif;
