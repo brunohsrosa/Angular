@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 export enum UserStatusEnum{
   ATIVO = 1,
@@ -10,7 +10,7 @@ export enum UserStatusEnum{
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'pipes';
 
   pessoa = {
@@ -22,5 +22,13 @@ export class AppComponent {
 
   texto = {
     textoPadrao: 'Texto Padrão',
+  }
+
+  minhaData: string = '2026-06-20T16:00:00.000Z';
+
+  ngOnInit() {
+    console.log('Data formatada região:', new Date(this.minhaData));
+    console.log('Data UTC-0:', new Date(this.minhaData).toUTCString());
+    console.log('Timestamp:', new Date(this.minhaData).getTime());
   }
 }

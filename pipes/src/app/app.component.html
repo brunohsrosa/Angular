@@ -32,3 +32,18 @@ Titlecase: {{texto.textoPadrao| titlecase}}
 Slice (start: 0, end: 5): {{texto.textoPadrao| slice:0:5}}
 <br>
 Json: {{texto| json}}
+<br><br>
+-------------------------------------------
+<br><br>
+
+<b>Formato ISO8601</b>
+<br>
+Data convertida região: {{minhaData | date : "full" }}
+<br>
+Formato UTC-0: {{minhaData | date : "full" :'+0000'}}
+<br><br>
+<b>Formato TimeStamp</b>
+<br>
+Timestamp para região: {{1781971200000 | date : "full" }}
+<br>
+Timestamp UTC-0: {{1781971200000 | date : "full" :'+0000'}}
