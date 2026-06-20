@@ -16,3 +16,19 @@
 Nome do Usuário: <b> {{pessoa.nome | truncate : 2| uppercase}}</b>
 <br>
 Status do Usuário: <b> {{pessoa.status | pessoaStatus }} </b>
+
+<br><br>
+-------------------------------------------
+<br><br>
+
+Texto: {{texto.textoPadrao}}
+<br>
+Uppercase: {{texto.textoPadrao| uppercase}}
+<br>
+Lowercase: {{texto.textoPadrao| lowercase}}
+<br>
+Titlecase: {{texto.textoPadrao| titlecase}}
+<br>
+Slice (start: 0, end: 5): {{texto.textoPadrao| slice:0:5}}
+<br>
+Json: {{texto| json}}

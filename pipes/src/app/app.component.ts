@@ -12,10 +12,15 @@ export enum UserStatusEnum{
 })
 export class AppComponent {
   title = 'pipes';
+
   pessoa = {
     nome: 'João',
     idade: 30,
     status: UserStatusEnum.ATIVO,
     // dataNascimento: new Date(1993, 5, 15)
   };
+
+  texto = {
+    textoPadrao: 'Texto Padrão',
+  }
 }
