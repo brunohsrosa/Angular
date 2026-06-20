@@ -1,0 +1,58 @@
+/* Centraliza o conteúdo na tela */
+.main-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* A borda fina e arredondada que envolve os campos */
+.container-formulario {
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 24px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra leve para profundidade */
+}
+
+/* Alinhamento dos botões abaixo da borda */
+.container-botoes {
+  display: flex;
+  justify-content: flex-end; /* Alinha os botões à direita */
+  gap: 16px;
+}
+
+/* Ajuste fino para os campos de extremidade na primeira linha */
+@media (min-width: 960px) {
+  .container-formulario .po-row:first-child {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* 1. Centraliza e limita a largura da página */
+.po-page-content {
+  max-width: 1200px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 2. Estilo para o container da assinatura dentro da modal */
+.signature-container {
+  border: 2px dashed #c0c0c0;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: crosshair; /* Muda o mouse para uma cruz */
+}
+
+.signature-container canvas {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.btn-alinhar button {
+  height: 10px; /* Altura padrão dos inputs do PO UI */
+}

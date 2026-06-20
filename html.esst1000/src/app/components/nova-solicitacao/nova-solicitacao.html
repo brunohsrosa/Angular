@@ -1,0 +1,78 @@
+
+
+  <div class="main-wrapper">
+    <h2>Nova Solicitação</h2>
+<br>
+    <div class="container-formulario">
+      <form>
+
+        <div class="po-row">
+          <po-select class="po-lg-4 po-md-5" name="estabelecimento" p-label="ESTABELECIMENTO" [p-options]="estabelecimentos"
+            p-required>
+          </po-select>
+
+          <po-datepicker class="po-lg-4 po-md-5 po-offset-lg-4 po-offset-md-2" name="dataSolicitacao" p-label="DATA SOLICITAÇÃO" p-required>
+          </po-datepicker>
+        </div>
+
+        <div class="po-row">
+          <po-lookup class="po-md-12" name="solicitante" p-label="SOLICITANTE" [p-filter-service]="funcionarioService"
+            p-field-label="nome" p-field-value="codigo">
+          </po-lookup>
+        </div>
+
+        <div class="po-row">
+          <po-lookup class="po-md-4" name="codigoItem" p-label="CÓDIGO ITEM" [p-filter-service]="itemService"
+            (p-change)="onItemChange($event)">
+          </po-lookup>
+
+          <po-input class="po-md-8" name="descricaoItem" p-label="DESCRIÇÃO" p-readonly="true">
+          </po-input>
+        </div>
+
+        <div class="po-row">
+          <po-number class="po-md-4" name="quantidade" p-label="QUANTIDADE" p-required>
+          </po-number>
+
+          <po-input class="po-md-4" name="unidade" p-label="UNIDADE" p-readonly="true">
+          </po-input>
+
+          <po-lookup class="po-md-4" name="deposito" p-label="DEPÓSITO" [p-filter-service]="depositoService">
+          </po-lookup>
+        </div>
+
+        <div class="po-row">
+          <po-lookup class="po-md-6" name="centroCusto" p-label="CENTRO CUSTO" [p-filter-service]="ccService">
+          </po-lookup>
+
+          <po-input class="po-md-6" name="contaContabil" p-label="CONTA CONTÁBIL" p-readonly="true">
+          </po-input>
+        </div>
+
+        <div class="po-row po-margin-top-1">
+          <po-input class="po-md-9" name="assinaturaStatus" p-label="ASSINATURA SOLICITANTE" p-readonly="true"
+            p-help="Clique ao lado para assinar">
+          </po-input>
+
+          <po-button class="po-md-3 po-margin-top-4 btn-alinhar" p-label="Assinar na Tela" p-icon="po-icon-edit"
+
+            (p-click)="abrirModalAssinatura()">
+          </po-button>
+        </div>
+
+      </form>
+    </div>
+    <br>
+    <div class="po-row po-margin-top-2 container-botoes">
+      <po-button class="po-md-3" p-label="SALVAR" (p-click)="salvar()"></po-button>
+      <po-button class="po-md-3" p-label="CANCELAR" (p-click)="cancelar()"></po-button>
+    </div>
+  </div>
+
+
+<po-modal #modalAssinatura p-title="Assinatura do Solicitante">
+
+  <div class="signature-container">
+    <canvas #signatureCanvas width="500" height="200"></canvas>
+  </div>
+</po-modal>

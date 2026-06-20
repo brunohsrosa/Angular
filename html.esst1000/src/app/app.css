@@ -1,0 +1,6 @@
+/* Ajusta o conteúdo para não ficar por baixo do menu quando colapsado */
+.po-main-content {
+  margin-left: 64px; /* Largura padrão do menu colapsado do PO UI */
+  transition: margin-left 0.3s ease;
+}
+
