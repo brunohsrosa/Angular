@@ -9,4 +9,10 @@
 
 {{pessoa | json | uppercase }}
 
+<br><br>
+-------------------------------------------
+<br><br>
 
+Nome do Usuário: <b> {{pessoa.nome | truncate : 2| uppercase}}</b>
+<br>
+Status do Usuário: <b> {{pessoa.status | pessoaStatus }} </b>
