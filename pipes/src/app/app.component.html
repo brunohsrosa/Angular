@@ -41,9 +41,30 @@ Json: {{texto| json}}
 Data convertida região: {{minhaData | date : "full" }}
 <br>
 Formato UTC-0: {{minhaData | date : "full" :'+0000'}}
+
 <br><br>
+
 <b>Formato TimeStamp</b>
 <br>
 Timestamp para região: {{1781971200000 | date : "full" }}
 <br>
 Timestamp UTC-0: {{1781971200000 | date : "full" :'+0000'}}
+
+<br><br>
+
+<b>Formatações Customizadas</b>
+<br>
+Curto: {{minhaData | date : "short" }}  <br>
+Médio: {{minhaData | date : "medium" }} <br>
+Longo: {{minhaData | date : "long" }} <br>
+
+<br><br>
+Data: {{minhaData | date : "dd/MM/yyyy" }}  <br>
+Dia da Semana: {{minhaData | date : "EEEE" }}  <br>
+Dia: {{minhaData | date : "dd" }}  <br>
+Mês: {{minhaData | date : "MM" }}  <br>
+Ano: {{minhaData | date : "yyyy" }}  <br>
+Hora: {{minhaData | date : "HH:mm:ss" }}  <br>
+{{minhaData | date : "'Hoje é ' EEEE 'dia' dd 'de' MMMM 'de' yyyy 'às' HH:mm:ss" }}  <br>
+
+
